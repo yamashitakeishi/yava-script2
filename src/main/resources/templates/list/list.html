@@ -42,17 +42,14 @@
 		</tr>
 
 		<!-- ***####を書き換え、社員情報を全件出力する*** -->
-		<tr th:each="####:####">
-
-
-
-
-
-
-
-
-
-
+		<tr th:each="user ${user}">
+			<td th:text="${user.empId}"></td>
+			<td th:text="${user.empName}"></td>
+			<td th:text="${user.gender}"></td>
+			<td th:text="${user.address}"></td>
+			<td th:text="${user.birthday}"></td>
+			<td th:text="${user.authority}"></td>
+			<td th:text="${user.deptName}"></td>
 		</tr>
 		<!-- ***####を書き換え、社員情報を全件出力する ここまで*** -->
 	</table>
