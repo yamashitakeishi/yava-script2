@@ -1,5 +1,7 @@
 package jp.co.sss.crud.controller;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,6 +61,7 @@ public class IndexController {
 	
 	@RequestMapping(path="/list",method = RequestMethod.POST)
 	public String list(HttpSession session) {
+		HttpSession session = request.getSession();
 		return "list/list";
 	}
 
