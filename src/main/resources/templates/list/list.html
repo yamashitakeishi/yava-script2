@@ -19,7 +19,7 @@
 			<th>部署名</th>
 		</tr>
 
-		 ***####を書き換え、社員情報を全件出力する*** 
+		 
 		<tr th:each="employee:${emp}">
 			<td th:text="${employee.empId}"></td>
 			<td th:text="${employee.empName}"></td>
@@ -29,16 +29,23 @@
 			<td th:text="${employee.authority}"></td>
 			<td th:text="${employee.department.deptName}"></td>
 		</tr>
-		 ***####を書き換え、社員情報を全件出力する ここまで*** 
+		 
 	</table>
-	
+<!--	<div class="regist_link">-->
+<!--		<a th:href="@{/regist/input}">新規社員登録</a>-->
+<!--	</div>-->
 	
 <!--	 セッション中にユーザ情報が存在する場合のみ以下の処理を実行する。 -->
 <!--	 なお、セッション中のユーザ情報がない（null）の場合、-->
 <!--	 フィルターの処理により、当該Thymeleaf処理完了後にログイン画面にリダイレクトする。 -->
-	<div class="regist_link">
-		<a th:href="@{/regist/input}">新規社員登録</a>
-	</div>
+<!--=======-->
+<!--	 セッション中にユーザ情報が存在する場合のみ以下の処理を実行する。 -->
+<!--	 なお、セッション中のユーザ情報がない（null）の場合、-->
+<!--	 フィルターの処理により、当該Thymeleaf処理完了後にログイン画面にリダイレクトする。 -->
+
+<!--	<div class="regist_link">-->
+<!--		<a th:href="@{/regist/input}">新規社員登録</a>-->
+<!--	</div>-->
 
 <!--	 ***検索結果が０件の場合*** -->
 <!--	 ***falseを書き換え、表示内容を記述すること*** -->
@@ -67,7 +74,7 @@
 <!--		</tr>-->
 
 <!--		 ***####を書き換え、社員情報を全件出力する*** -->
-<!--		<tr th:each="user ${emp}">-->
+<!--		<tr th:each="user ${user}">-->
 <!--			<td th:text="${user.empId}"></td>-->
 <!--			<td th:text="${user.empName}"></td>-->
 <!--			<td th:text="${user.gender}"></td>-->
