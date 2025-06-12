@@ -56,5 +56,10 @@ public class IndexController {
 		session.invalidate();
 		return "redirect:/";
 	}
+	
+	@RequestMapping(path="/list",method = RequestMethod.POST)
+	public String list(HttpSession session) {
+		return "list/list";
+	}
 
 }
