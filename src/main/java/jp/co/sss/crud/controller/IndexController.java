@@ -1,7 +1,5 @@
 package jp.co.sss.crud.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +41,7 @@ public class IndexController {
 			employeeBean.setAuthority(employee.getAuthority());
 			session.setAttribute("user", employeeBean);
 			// 一覧へリダイレクト
-			return "redirect:/list";
+			return "redirect:/test";
 
 		} else {
 			model.addAttribute("errMessage", "社員ID、またはパスワードが間違っています。");
@@ -59,10 +57,10 @@ public class IndexController {
 		return "redirect:/";
 	}
 	
-	@RequestMapping(path="/list",method = RequestMethod.POST)
-	public String list(HttpSession session) {
-		HttpSession session = request.getSession();
-		return "list/list";
-	}
+//	@RequestMapping(path="/list",method = RequestMethod.POST)
+//	public String list(HttpSession session) {
+//		HttpSession session = request.getSession();
+//		return "list/list";
+//	}
 
 }
