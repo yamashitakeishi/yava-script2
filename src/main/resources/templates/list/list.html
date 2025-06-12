@@ -16,18 +16,18 @@
 			<th>住所</th>
 			<th>生年月日</th>
 			<th>権限</th>
-<!--			<th>部署名</th>-->
+			<th>部署名</th>
 		</tr>
 
 		 ***####を書き換え、社員情報を全件出力する*** 
-		<tr th:each="emp:${emp}">
-			<td th:text="${emp.empId}"></td>
-			<td th:text="${emp.empName}"></td>
-			<td th:text="${emp.gender}"></td>
-			<td th:text="${emp.address}"></td>
-			<td th:text="${emp.birthday}"></td>
-			<td th:text="${emp.authority}"></td>
-<!--			<td th:text="${emp.department.deptName}"></td>-->
+		<tr th:each="employee:${emp}">
+			<td th:text="${employee.empId}"></td>
+			<td th:text="${employee.empName}"></td>
+			<td th:text="${employee.gender}"></td>
+			<td th:text="${employee.address}"></td>
+			<td th:text="${employee.birthday}"></td>
+			<td th:text="${employee.authority}"></td>
+			<td th:text="${employee.department.deptName}"></td>
 		</tr>
 		 ***####を書き換え、社員情報を全件出力する ここまで*** 
 	</table>
